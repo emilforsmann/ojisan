@@ -1,13 +1,9 @@
-import dynamic from 'next/dynamic';
-
-const GameBoard = dynamic(() => import('@/components/GameBoard'), {
-  ssr: false
-});
+import GameBoardWrapper from '@/components/GameBoardWrapper';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f7e9d7] p-4">
-      <GameBoard />
+    <main style={{ backgroundColor: '#f7e9d7', minHeight: '100vh', padding: '1rem' }}>
+      <GameBoardWrapper />
     </main>
   );
 }
